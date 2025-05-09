@@ -5,3 +5,7 @@ Progetto per la conversione da numeri arabi a numeri romani
 ### Build & Coverage Report
 ...
 <!-- BUILD-REPORT-END -->
+
+<!-- BUILD-REPORT-START -->
+...contenuto...
+<!-- BUILD-REPORT-END -->
