@@ -1,11 +1,3 @@
-# roman-number
-Progetto per la conversione da numeri arabi a numeri romani
-
 <!-- BUILD-REPORT-START -->
-### Build & Coverage Report
-...
-<!-- BUILD-REPORT-END -->
-
-<!-- BUILD-REPORT-START -->
-...contenuto...
+Qui verrà visualizzato il report della build e del coverage.
 <!-- BUILD-REPORT-END -->
