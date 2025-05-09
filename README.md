@@ -2,5 +2,6 @@
 Progetto per la conversione da numeri arabi a numeri romani
 
 <!-- BUILD-REPORT-START -->
-...verrà sovrascritto automaticamente...
+### Build & Coverage Report
+...
 <!-- BUILD-REPORT-END -->
