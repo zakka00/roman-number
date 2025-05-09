@@ -36,12 +36,20 @@ jobs:
       run: |
         START="<!-- BUILD-REPORT-START -->"
         END="<!-- BUILD-REPORT-END -->"
-        REPORT=$(cat temp/summary.md)
+        {
+          echo "$START"
+          cat temp/summary.md
+          echo "$END"
+        } > temp/full_report.md
 
         if grep -q "$START" README.md; then
-          sed -i "/$START/,/$END/c\\$START\n$REPORT\n$END" README.md
+          awk -v start="$START" -v end="$END" 'BEGIN{inblock=0}
+            $0 ~ start {print; while ((getline line < "temp/summary.md") > 0) print line; inblock=1; next}
+            $0 ~ end {print; inblock=0; next}
+            !inblock {print}
+          ' README.md > README.tmp && mv README.tmp README.md
         else
-          echo -e "\n$START\n$REPORT\n$END" >> README.md
+          cat temp/full_report.md >> README.md
         fi
 
     - name: Commit updated README.md
