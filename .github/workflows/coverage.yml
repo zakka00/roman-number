@@ -51,6 +51,11 @@ jobs:
         else
           cat temp/full_report.md >> README.md
         fi
+        
+    - name: Debug README.md
+      run: |
+        echo "==== Contenuto README.md prima dell'aggiornamento ===="
+        cat README.md
 
     - name: Commit updated README.md
       run: |
