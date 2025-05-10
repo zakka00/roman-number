@@ -20,8 +20,8 @@ Audit done.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  9.060 s
-[INFO] Finished at: 2025-05-10T08:24:38Z
+[INFO] Total time:  7.748 s
+[INFO] Finished at: 2025-05-10T08:36:06Z
 [INFO] ------------------------------------------------------------------------
 ```
 Formato CSV della build coverage di JaCoCo:
