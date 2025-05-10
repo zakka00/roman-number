@@ -25,9 +25,9 @@ jobs:
     - name: Create build summary and script for the re-writing of the README.md file
       run: |
         echo "### Build & Coverage Report" > temp/summary.md
-        echo "Log finale Maven (ultime righe):" >> temp/summary.md
+        echo "Log finale Maven (ultime 20 righe):" >> temp/summary.md
         echo '```' >> temp/summary.md
-        tail -n 40 temp/build.log >> temp/summary.md
+        tail -n 20 temp/build.log >> temp/summary.md
         echo '```' >> temp/summary.md
         if [ -f target/site/jacoco/jacoco.csv ]; then
           echo '```csv' >> temp/summary.md
