@@ -28,3 +28,5 @@ roman-number,it.unipd.mtss,RomanPrinter,9,0,0,0,3,0,3,0,3,0
 Violazioni Checkstyle:
 Errori rilevati: 0
 
+A
+
