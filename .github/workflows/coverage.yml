@@ -25,19 +25,14 @@ jobs:
     - name: Create build summary and script for the re-writing of the README.md file
       run: |
         echo "### Build & Coverage Report" > temp/summary.md
-        echo "Log finale Maven (ultime righe):" >> temp/summary.md
-        echo '```' >> temp/summary.md
-        tail -n 15 temp/build.log >> temp/summary.md
-        echo '```' >> temp/summary.md
-        if [ -f target/site/jacoco/jacoco.csv ]; then
-          echo '```csv' >> temp/summary.md
-          head -n 1 target/site/jacoco/jacoco.csv >> temp/summary.md     # intestazione
-          tail -n +2 target/site/jacoco/jacoco.csv >> temp/summary.md    # contenuto
-          echo '```' >> temp/summary.md
-        else
-          echo "_File jacoco.csv non trovato._" >> temp/summary.md
-        fi
-        echo "Violazioni Checkstyle:" >> temp/summary.md
+        echo "##Risultato terminale Maven:\n" >> temp/summary.md
+        tail -n 40 temp/build.log >> temp/summary.md
+        echo '-------------------------------------------------------------\n' >> temp/summary.md
+        echo '##Formato CSV della build coverage con JaCoCo:\n' >> temp/summary.md
+        head -n 1 target/site/jacoco/jacoco.csv >> temp/summary.md     
+        tail -n +2 target/site/jacoco/jacoco.csv >> temp/summary.md    
+        echo '-------------------------------------------------------------\n' >> temp/summary.md
+        echo "##Violazioni Checkstyle:\n" >> temp/summary.md
         CHECKSTYLE_ERRORS=$(grep -o 'severity="error"' target/checkstyle-result.xml | wc -l)
         echo "Errori rilevati: $CHECKSTYLE_ERRORS" >> temp/summary.md
         REPORT=$(cat temp/summary.md)
