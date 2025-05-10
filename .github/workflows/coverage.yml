@@ -32,10 +32,8 @@ jobs:
         echo "Formato CSV della build coverage di JaCoCo:" >> temp/summary.md
         echo '```' >> temp/summary.md
         if [ -f target/site/jacoco/jacoco.csv ]; then
-          echo '```csv' >> temp/summary.md
           head -n 1 target/site/jacoco/jacoco.csv >> temp/summary.md     # intestazione
           tail -n +2 target/site/jacoco/jacoco.csv >> temp/summary.md    # contenuto
-          echo '```' >> temp/summary.md
         else
           echo "_File jacoco.csv non trovato._" >> temp/summary.md
         fi
