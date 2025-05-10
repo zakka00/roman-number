@@ -15,8 +15,8 @@ Audit done.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.454 s
-[INFO] Finished at: 2025-05-10T00:02:23Z
+[INFO] Total time:  6.594 s
+[INFO] Finished at: 2025-05-10T00:04:10Z
 [INFO] ------------------------------------------------------------------------
 ```
 ```csv
@@ -27,6 +27,4 @@ roman-number,it.unipd.mtss,RomanPrinter,9,0,0,0,3,0,3,0,3,0
 ```
 Violazioni Checkstyle:
 Errori rilevati: 0
-
-A
 
