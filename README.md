@@ -20,15 +20,18 @@ Audit done.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.431 s
-[INFO] Finished at: 2025-05-10T08:19:05Z
+[INFO] Total time:  6.153 s
+[INFO] Finished at: 2025-05-10T08:21:02Z
 [INFO] ------------------------------------------------------------------------
+```
+Formato CSV della build coverage di JaCoCo:
 ```
 ```csv
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
 roman-number,it.unipd.mtss,App,7,0,0,0,3,0,2,0,2,0
 roman-number,it.unipd.mtss,IntegerToRoman,5,0,0,0,2,0,2,0,2,0
 roman-number,it.unipd.mtss,RomanPrinter,9,0,0,0,3,0,3,0,3,0
+```
 ```
 Violazioni Checkstyle:
 Errori rilevati: 0
